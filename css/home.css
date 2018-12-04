@@ -1,0 +1,184 @@
+.navbar {
+    border-bottom: #008ed6 3px solid;
+}
+
+.home-inner {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.home-body {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.green-btn,
+.blue-btn,
+.about-btn {
+    padding: 7px;
+    border-radius: 2px;
+}
+
+.logo {
+    height: 48px;
+    width: 75px;
+}
+
+.green-btn {
+    border: 1px solid #34ab39;
+    background-color: #4caf50;
+}
+
+.blue-btn {
+    border: 1px solid #0e90f7;
+    background-color: #2196f3;
+}
+
+.about-btn {
+    border: 1px solid #fff;
+}
+
+.navbar-nav>li {
+    text-align: center;
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    color: #ffffffb8;
+}
+
+#main-footer {
+    color: white;
+}
+
+.modal-sm {
+    margin-top: 145px;
+    max-width: 422px;
+    ;
+}
+
+.text-white {
+    color: white;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.check-back {
+    fill: rgb(11, 149, 108);
+}
+
+.modal-button {
+    border: 1px solid rgb(12, 224, 162);
+    background-color: rgb(12, 166, 120);
+}
+
+.modal-button:hover {
+    background-color: rgb(14, 166, 129);
+}
+
+.modal-button:active {
+    background-color: rgb(14, 166, 129);
+}
+
+@media(max-width:467px) {
+    p {
+        font-size: 16px;
+    }
+    .dark-overlay {
+        background: url('../assets/img/home_xs.png') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        color: #fff;
+        align-content: center;
+    }
+}
+
+/* Extra Small devices (small, up to 468px) */
+@media (min-width: 468px) {
+    p {
+        font-size: 16px;
+    }
+    .dark-overlay {
+        background: url('../assets/img/home_sm.png') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        color: #fff;
+        align-content: center;
+    }
+}
+
+/* Small devices (mobile, 576px and up) */
+@media (min-width: 576px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 17px;
+    }
+    .dark-overlay {
+        background: url('../assets/img/home_md.png') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        color: #fff;
+        align-content: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .dark-overlay {
+        background: url('../assets/img/home_lg.png') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        color: #fff;
+        align-content: center;
+    }
+}
+
+/* Large  devices (desktop, 992px and up) */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    p {
+        font-size: 21px;
+    }
+    .dark-overlay {
+        background: url('../assets/img/home_xl.png') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        color: #fff;
+        align-content: center;
+    }
+}

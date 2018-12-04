@@ -1,0 +1,123 @@
+body {
+    color: white;
+}
+
+.navbar {
+    border-bottom: #008ed6 3px solid
+}
+
+.logout-btn,
+.about-btn {
+    padding: 7px;
+    border-radius: 2px;
+}
+
+.logout-btn {
+    border: 1px solid #fff;
+}
+
+.about-btn {
+    border: 1px solid #fff;
+}
+
+.navbar-nav>li {
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+
+#home-section {
+    background: url('../assets/img/budget.jpg') no-repeat;
+    background-size: cover;
+    position: center;
+    height: 345px;
+    opacity: 0.9;
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+}
+
+.home-body {
+    padding-top: 150px;
+}
+
+.logo {
+    width: 45px;
+    height: 30px;
+}
+
+.header-banner-green{
+    max-width: 390px; 
+    background-color: #28B9B5;
+}
+
+.header-banner-red{
+    max-width: 390px; 
+    background-color: #FF5049;
+}
+
+.item-card-container{
+    height: 450px;
+    overflow-y:auto;
+}
+
+
+
+.check-back:hover {
+    fill: white;
+}
+
+.check-back {
+    fill: rgb(11, 149, 108);
+}
+
+
+/*.btn-delete-size {
+    width: 12px;
+    height: 12px;
+}
+*/
+
+.btn-delete-item:hover {
+	cursor:pointer;
+    fill: red;
+}
+
+.btn-delete-item {
+    /*fill: rgba(255, 255, 255, 0.8);*/
+    fill: rgba(255, 3, 3, 0.75);
+}
+
+
+
+
+.item-description,
+.item-value {
+    font-size: 0.889em;
+}
+
+.item-value{
+    color: #FF5049;
+}
+
+.item-percentage {
+    background-color: rgba(255, 80, 71, 0.2);
+    color: #FF5049;
+    font-size: 0.79em;
+    
+}
+
+
+/* Large  devices (desktop, 992px and up) */
+@media (min-width: 992px) {
+    .item-description,
+    .item-value {
+        font-size: 1.025em;
+    }
+    .item-percentage {
+        font-size: 0.82em;    
+    }
+}

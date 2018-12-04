@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+    <script src="vendors/jquery-slim.min.js"></script>
+    <title>BudgetManager</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+            <a href="home.html" class="navbar-brand" style="font-size: 4vh">Budget Manager</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#loginModal"
+                            class="nav-link green-btn text-white">Log in</a>
+                    </li>
+
+                    <li class="nav-item mx-sm-3">
+                        <a href="#" id="btn_register" data-backdrop="static" data-keyboard="false" data-toggle="modal"
+                            data-target="#registerModel" class="nav-link  blue-btn text-white">Sign up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" data-toggle="modal" data-target="#aboutModal" class="nav-link btn btn-outline-secondary  text-white about-btn">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header id="home-section">
+        <div class="dark-overlay">
+            <div class="home-inner">
+                <div class="home-body">
+                    <div class="container pt-md-3">
+                        <div class="row">
+                            <div class="col col-md-11 col-lg-10 d -block">
+                                <h1 class="">Master your <strong>money</strong> to get out and stay out of debt</h1>
+                                <p class="mt-4">Budget your finances to know where your money is going. BudgetManager
+                                    is a
+                                    online money management tool that just do that</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="share-head-section">
+        <div class="container">
+            <div class="row">
+                <div class="col  text-center">
+                    <div class="pb-4 pt-5">
+                        <h2 class="font-weight-bold">Get started with
+                            <div class="font-weight-bold"> Budget Manager</div>
+                        </h2>
+                        <p class="lead" style="color: #0000009a; font-weight: 400">Keep your daily financial income and
+                            expense calculated, you'll discover the effortless way to manage your financial allocation</p>
+                        <a href="#" data-toggle="modal" data-target="#registerModel" class="btn btn-success">Create an
+                            account, it's free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-success">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title">Login</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form method="POST" id="form_login">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="login_email">Email</label>
+                            <input type="email" placeholder="Email" autocomplete='email' class="form-control" name="login_email"
+                                id="login_email" maxlength="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login_password">Password</label>
+                            <input type="password" placeholder="Password" class="form-control" name="login_password" id="login_password"
+                                oninvalid="this.setCustomValidity('Please enter password')" oninput="setCustomValidity('')"
+                                maxlength="12" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" role="button" name="login_close" data-dismiss="modal">Close
+                        </button>
+                        <button type="submit" role="button" class="btn btn-success" name="login_submit" id="login_submit"
+                            data-loading-text="<i class='fa fa-spinner fa-spin '></i> Please Wait">Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-dark" id="registerModel">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title" id="contactModalTitle">Sign Up Form</h5>
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <form method="POST" id="form_register">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="register_username">Name</label>
+                            <input type="text" class="form-control" name="register_username" id="register_username"
+                                maxlength="12" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register_email">Email</label>
+                            <input type="text" autocomplete='email' class="form-control" name="register_email" id="register_email"
+                                maxlength="50" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register_password">Password</label>
+                            <input type="password" class="form-control" name="register_password" id="register_password"
+                                maxlength="12" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register_confirm_password">Confirm Password</label>
+                            <input type="password" class="form-control" name="register_confirm_password" id="register_confirm_password"
+                                maxlength="12" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" role="button" class="btn btn-primary btn-block disabled not-allowed" name="register_submit"
+                            id="register_submit" disabled>Submit
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="successModel" role="document" aria-hidden="true">
+        <div class="modal-dialog modal-sm ">
+            <div class="modal-content  ">
+                <div class="modal-body text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mx-auto logo">
+                        <path class="check-back" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z">
+                        </path>
+                    </svg>
+                    <h5 class="h3 mt-1 modal-head">Sign up Successful</h5>
+                    <button class="mt-3 btn btn-success px-5" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="aboutModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-secondary">
+                <div class="modal-header bg-secondary">
+                    <h5 class="modal-title" id="exampleModalLabel">About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <h2>Budget Manager</h2>
+                    <div class="px-4">
+                        <hr>
+                    </div>
+                    <p class="text-sm" style="color: #000;"> A simple a budget manager web application to calculate
+                        income and expense. </p>
+                    <p class="text-sm" style="color: #000;">It's an open source project developed for learing purpose.</p>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <a href="https://www.github.com/Ravi879/BudgetManager" class="btn btn-primary" target="_blank">Looking
+                        for source code &nbsp;&nbsp; <i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="main-footer" class="bg-dark">
+        <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
+            <a class="dark-grey-text" href="#"> BudgetManager.com</a>
+        </div>
+    </footer>
+
+
+    <script src="vendors/popper.min.js"></script>
+    <script src="vendors/bootstrap.min.js"></script>
+
+    <script type="module" src="js/login.js"></script>
+    <script type="module" src="js/register.js"></script>
+</body>
+
+</html>
